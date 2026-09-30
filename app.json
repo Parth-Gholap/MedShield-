@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "MedShield",
+    "slug": "medshield",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "medshield",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.medshield.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "MedShield needs access to your camera to photograph medicine strip batch codes."
+      }
+    },
+    "android": {
+      "package": "com.medshield.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#16213E",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "MedShield needs access to your camera to photograph medicine strip batch codes."
+        }
+      ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "27401063-d2dc-4b56-930c-f3d8b9cca8a5"
+      }
+    }
+  }
+}
